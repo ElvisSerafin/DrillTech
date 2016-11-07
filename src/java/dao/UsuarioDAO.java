@@ -25,7 +25,7 @@ public class UsuarioDAO {
         cn = con.conectar();
         
         try{
-            CallableStatement cs = cn.prepareCall("{CALL LOGEAR_USUARIO (?)}");
+            CallableStatement cs = cn.prepareCall("CALL LOGEAR_USUARIO (?)");
             cs.setString(1, id_usuario);
             ResultSet rs = cs.executeQuery();
             
@@ -104,7 +104,7 @@ public class UsuarioDAO {
         cn = con.conectar();
         
         try{
-            CallableStatement cs = cn.prepareCall("CALL REGISTRAR_USUARIO_CLIENTE (?,?,?,?,?,?,?,?,?,?,?,?)");
+            CallableStatement cs = cn.prepareCall("CALL REGISTRAR_USUARIO_CLIENTE (?,?,?,?,?,?,?,?,?,?,?)");
             cs.setString(1, usu.getNombre());
             cs.setString(2, usu.getApellidos());
             cs.setString(3, usu.getDni());
@@ -112,10 +112,10 @@ public class UsuarioDAO {
             cs.setString(5, usu.getDepartamento());
             cs.setString(6, usu.getProvincia());
             cs.setString(7, usu.getDistrito());
-            cs.setString(9, usu.getDireccion());
-            cs.setString(10, usu.getTelefonoUsuario());
-            cs.setInt(11, usu.getIdUsuario());
-            cs.setString(12, usu.getClave());
+            cs.setString(8, usu.getDireccion());
+            cs.setString(9, usu.getTelefonoUsuario());
+            cs.setInt(10, usu.getIdUsuario());
+            cs.setString(11, usu.getClave());
             int i = cs.executeUpdate();
             
             if(i == 1){

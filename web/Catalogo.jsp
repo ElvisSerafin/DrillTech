@@ -26,7 +26,7 @@
         <%
             int codigo = -1;
             try{
-                codigo=Integer.parseInt(session.getAttribute("parametroCodigo").toString());
+                codigo=Integer.parseInt(session.getAttribute("parametroId").toString());
             }catch(Exception e){
                 e.printStackTrace();
             }
@@ -87,7 +87,7 @@
                                 <%=p.getDescripcion()%><br>
                                 S/ <%=p.getPrecioP() %><br>
                             <input type="button" class="BotonModificar" name="btnModificar" value="Modificar" onclick="location.href='ModificarProducto.jsp?idProducto=<%=p.getIdProducto()%>'">
-                            <input type="button" class="BotonADD" name="btnADD" value="ADD Carrito" onclick="location.href='AnadirCarrito.jsp?codigoP=<%=p.getIdProducto()%>&&cliente=<%=cliente %>'"><br>
+                            <input type="button" class="BotonADD" name="btnADD" value="ADD Carrito" onclick="location.href='AnadirCarrito.jsp?idProducto=<%=p.getIdProducto()%>&&cliente=<%=cliente %>'"><br>
                             </th>
                 <%
                         salto++;

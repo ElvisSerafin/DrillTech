@@ -18,7 +18,7 @@
     </head>
     
     <%
-        UsuarioDTO usu = UsuarioDAO.listarUsuarioPorId(Integer.parseInt(request.getParameter("codigoU")));
+        UsuarioDTO usu = UsuarioDAO.listarUsuarioPorId(Integer.parseInt(request.getParameter("idU")));
     %>
     
     <body>

@@ -20,7 +20,7 @@
     </head>
     <%
         String cliente = request.getParameter("cliente");
-        ProductoDTO p = ProductoDAO.listarProductoPorId(Integer.parseInt(request.getParameter("codigoP")));
+        ProductoDTO p = ProductoDAO.listarProductoPorId(Integer.parseInt(request.getParameter("idProducto")));
     %>
     
     <body>
