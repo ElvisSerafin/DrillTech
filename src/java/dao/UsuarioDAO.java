@@ -135,7 +135,7 @@ public class UsuarioDAO {
         cn = con.conectar();
         
         try{
-            CallableStatement cs = cn.prepareCall("CALL MODIFICAR_USUARIO (?,?,?,?,?,?,?,?,?,?)");
+            CallableStatement cs = cn.prepareCall("CALL MODIFICAR_USUARIO (?,?,?,?,?,?,?,?,?)");
             cs.setInt(1, usu.getIdUsuario());
             cs.setString(2, usu.getNombre());
             cs.setString(3, usu.getApellidos());
@@ -143,8 +143,8 @@ public class UsuarioDAO {
             cs.setString(5, usu.getDepartamento());
             cs.setString(6, usu.getProvincia());
             cs.setString(7, usu.getDistrito());
-            cs.setString(9, usu.getDireccion());
-            cs.setString(10, usu.getTelefonoUsuario());
+            cs.setString(8, usu.getDireccion());
+            cs.setString(9, usu.getTelefonoUsuario());
             int i = cs.executeUpdate();
             
             if(i == 1){
@@ -263,7 +263,7 @@ public class UsuarioDAO {
                 usu.setDepartamento(rs.getString("Departamento_U"));
                 usu.setProvincia(rs.getString("Provincia_U"));
                 usu.setDistrito(rs.getString("Distrito_U"));
-                usu.setDireccion(rs.getString("Direccion_U"));
+                usu.setDireccion(rs.getString("Direcion_U"));
                 usu.setTelefonoUsuario(rs.getString("Telefono_U")); 
                 usu.setUsuario(rs.getString("Usuario_U"));
                 usu.setClave(rs.getString("Clave_U"));

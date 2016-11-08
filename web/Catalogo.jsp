@@ -48,7 +48,7 @@
                         <a href="RegistrarVenta.jsp" class="link" id="lnkCompra"><h4>Mi compra</h4></a>
                     </td>
                     <td>
-                        <a href="MiPerfil.jsp?idU=<%=usu.getIdUsuario()%>" class="link" id="lnkPerfil">Mi cuenta</a>  
+                        <a href="MiPerfil.jsp?idU=<%=usu.getIdUsuario() %>" class="link" id="lnkPerfil">Mi cuenta</a>  
                     </td>
                     <td>
                         <a href="CuentaAdministrador.jsp" class="link" id="lnkAdm">Administrar</a>

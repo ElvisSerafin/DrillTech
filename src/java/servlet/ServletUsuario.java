@@ -199,7 +199,7 @@ public class ServletUsuario extends HttpServlet {
     private void DarBajaUsuario(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException { 
         UsuarioDTO usu = new UsuarioDTO();
-        usu.setIdUsuario(Integer.parseInt(request.getParameter("codigoU")));
+        usu.setIdUsuario(Integer.parseInt(request.getParameter("idU")));
         
         boolean resp = UsuarioDAO.DarDeBajaUsuario(usu);
         if(resp){
@@ -212,7 +212,7 @@ public class ServletUsuario extends HttpServlet {
     private void DarAltaUsuario(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException { 
         UsuarioDTO usu = new UsuarioDTO();
-        usu.setIdUsuario(Integer.parseInt(request.getParameter("codigoU")));
+        usu.setIdUsuario(Integer.parseInt(request.getParameter("idU")));
         
         boolean resp = UsuarioDAO.DarDeAltaUsuario(usu);
         if(resp){
