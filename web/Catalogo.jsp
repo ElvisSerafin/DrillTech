@@ -87,7 +87,7 @@
                                 <%=p.getDescripcion()%><br>
                                 S/ <%=p.getPrecioP() %><br>
                             <input type="button" class="BotonModificar" name="btnModificar" value="Modificar" onclick="location.href='ModificarProducto.jsp?idProducto=<%=p.getIdProducto()%>'">
-                            <input type="button" class="BotonADD" name="btnADD" value="ADD Carrito" onclick="location.href='AnadirCarrito.jsp?idProducto=<%=p.getIdProducto()%>&&cliente=<%=cliente %>'"><br>
+                            <input type="button" class="BotonADD" name="btnADD" value="ADD Carrito" onclick="location.href='AgregarCarrito.jsp?idProducto=<%=p.getIdProducto()%>&&cliente=<%=cliente %>'"><br>
                             </th>
                 <%
                         salto++;

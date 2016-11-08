@@ -145,7 +145,7 @@
                 </tr>
                 <tr>
                     <td>
-                        <input type="button" name="btnRegistrar" class="btn btn-primary" value="Registrar compra">
+                        <input type="button" name="btnRegistrar" id="btnRegistrarVenta" class="button" value="Registrar compra">
                     </td>
                 </tr>
                 <tr>

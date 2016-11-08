@@ -52,7 +52,7 @@ public class VentaDAO {
                 VentaDTO v = new VentaDTO();
                 v.setIdVenta(Integer.parseInt(rs.getString("idVenta")));
                 v.setIdUsuario(Integer.parseInt(rs.getString("idUsuario"))); 
-                v.setUsuario(rs.getString("Usuario"));
+                v.setUsuario(rs.getString("Cliente"));
                 v.setTotal(rs.getDouble("Total")); 
                 v.setFecha(rs.getString("Fecha")); 
                 lista.add(v);

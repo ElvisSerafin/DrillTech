@@ -190,8 +190,8 @@ public class ProductoDAO {
             ResultSet rs = cs.executeQuery();
             while (rs.next()) {
                 p.setIdProducto(rs.getInt("idProducto"));
-                p.setIdClase_Producto(rs.getInt("idClase_Producto"));
-                p.setIdMarca_Producto(rs.getInt("idMarca_Producto"));
+                p.setClase_Producto(rs.getString("Nombre_CP"));
+                p.setMarca_Producto(rs.getString("Nombre_MP"));
                 p.setDescripcion(rs.getString("Descripcion_P"));
                 p.setPrecioP(rs.getDouble("Precio_P"));
                 p.setImagenP(rs.getString("Imagen_P"));
