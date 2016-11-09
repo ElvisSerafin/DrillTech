@@ -93,10 +93,10 @@
                         <%=P.getEstadoP() %>
                     </td>
                     <td class="Opcion">
-                        <input type="button" name="btnModificar" id="btnModificar" class="button" value="Modificar" onclick="location.href='ModificarProducto.jsp?codigoP=<%=P.getIdProducto()%>'"> 
+                        <input type="button" name="btnModificar" id="btnModificar" class="button" value="Modificar" onclick="location.href='ModificarProducto.jsp?idProducto=<%=P.getIdProducto()%>'"> 
                     </td>
                     <td class="Opcion">
-                        <input type="button" name="btnEliminar" id="btnEliminar" class="button" value="Eliminar" onclick="location.href='Servlet_Prod?codigoP=<%=P.getIdProducto()%>&&accion=eliminar'">
+                        <input type="button" name="btnEliminar" id="btnEliminar" class="button" value="Eliminar" onclick="location.href='Servlet_Prod?idProducto=<%=P.getIdProducto()%>&&accion=eliminar'">
                     </td>
                 </tr>
                 

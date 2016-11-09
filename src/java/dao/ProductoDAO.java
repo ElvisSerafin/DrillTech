@@ -106,8 +106,8 @@ public class ProductoDAO {
         try {
             CallableStatement cs = cn.prepareCall("CALL MODIFICAR_PRODUCTO (?,?,?,?,?,?)");
             cs.setInt(1, p.getIdProducto());
-            cs.setInt(2, p.getIdClase_Producto());
-            cs.setInt(3, p.getIdMarca_Producto());
+            cs.setString(2, p.getClase_Producto());
+            cs.setString(3, p.getMarca_Producto());
             cs.setString(4, p.getDescripcion());
             cs.setDouble(5, p.getPrecioP());
             cs.setString(6, p.getImagenP());
