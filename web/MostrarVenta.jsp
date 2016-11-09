@@ -81,10 +81,10 @@
                         <%=v.getFecha() %>
                     </td>
                     <td class="Opcion">
-                        <input type="button" name="btnDetalle" id="btnDetalle" class="button" value="Detalle venta" onclick="location.href='Servlet_Venta?codigoV=<%=v.getIdVenta() %>&&cliente=<%=v.getUsuario() %>&&importe=<%=v.getTotal() %>&&FechaV=<%=v.getFecha() %>&&codigoCli=<%=v.getIdUsuario() %>&&accion=MostrarDetalle'">
+                        <input type="button" name="btnDetalle" id="btnDetalle" class="button" value="Detalle venta" onclick="location.href='ServletVenta?idVenta=<%=v.getIdVenta() %>&&cliente=<%=v.getUsuario() %>&&importe=<%=v.getTotal() %>&&FechaV=<%=v.getFecha() %>&&codigoCli=<%=v.getIdUsuario() %>&&accion=MostrarDetalle'">
                     </td>
                     <td class="Opcion">
-                        <input type="button" name="btnEliminar" id="btnEliminar" class="button" value="Eliminar" onclick="location.href='Servlet_Venta?codigoV=<%=v.getIdVenta() %>&&accion=EliminarVenta'"> 
+                        <input type="button" name="btnEliminar" id="btnEliminar" class="button" value="Eliminar" onclick="location.href='ServletVenta?idVenta=<%=v.getIdVenta() %>&&accion=EliminarVenta'"> 
                     </td>
                 </tr>
                 
