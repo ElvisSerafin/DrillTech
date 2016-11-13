@@ -1,118 +1,159 @@
 <!DOCTYPE html>
-<!--
-To change this license header, choose License Headers in Project Properties.
-To change this template file, choose Tools | Templates
-and open the template in the editor.
--->
+
 <html>
     <head>
         <title>Inicio I Drilling Tech</title>
-        <style type="text/css">
-
-            body{
-                background: url('Imagen/bgg.jpg');
-            }
-            nav{
-                margin: 0 auto; /* Centro el contenedor */
-                text-align: center;
-                width: 960px; /* Defino el ancho de mi página */
-            }
-            nav ul ul {
-                display: none;
-            }
-
-            nav ul li:hover > ul {
-                display: block;
-            }
-            nav ul {
-                background: #efefef; 
-                background: linear-gradient(top, #efefef 0%, #bbbbbb 100%);  
-                background: -moz-linear-gradient(top, #efefef 0%, #bbbbbb 100%); 
-                background: -webkit-linear-gradient(top, #efefef 0%,#bbbbbb 100%); 
-                box-shadow: 0px 0px 9px rgba(0,0,0,0.15);
-                padding: 0 20px;
-                border-radius: 10px;  
-                list-style: none;
-                position: relative;
-                display: inline-table;
-            }
-            nav ul:after {
-                content: ""; 
-                clear: both; 
-                display: block;
-            }
-            nav ul li {
-                float: left;
-            }
-            nav ul li:hover {
-                background: #4b545f;
-                background: linear-gradient(top, #4f5964 0%, #5f6975 40%);
-                background: -moz-linear-gradient(top, #4f5964 0%, #5f6975 40%);
-                background: -webkit-linear-gradient(top, #4f5964 0%,#5f6975 40%);
-            }
-            nav ul li:hover a {
-                color: #fff;
-            }
-
-            nav ul li a {
-                display: block; 
-                padding: 25px 40px;
-                color: #757575; 
-                text-decoration: none;
-            }
-
-            nav ul ul {
-                background: #5f6975; 
-                border-radius: 0px; 
-                padding: 0;
-                position: absolute; 
-                top: 100%;
-            }
-            nav ul ul li {
-                float: none; 
-                border-top: 1px solid #6b727c;
-                border-bottom: 1px solid #575f6a;
-                position: relative;
-            }
-            nav ul ul li a {
-                padding: 15px 40px;
-                color: #fff;
-            }	
-            nav ul ul li a:hover {
-                background: #4b545f;
-            }
-            nav ul ul ul {
-                position: absolute; left: 100%; top:0;
-            }
-
-        </style>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
+        <link href="css/main.css" rel="stylesheet" type="text/css"/>
+        <!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
     </head>
-    <body>
-        <nav >
-            <ul>
-                <li><a href="index.html">Inicio</a></li>
-                <li><a href="Catalogo.jsp">Catalogo</a>
-                    <ul>
-                        <li><a href="#">Photoshop</a></li>
-                        <li><a href="#">Illustrator</a></li>
-                        <li><a href="#">Diseño web</a>
-                            <ul>
-                                <li><a href="#">HTML</a></li>
-                                <li><a href="#">CSS</a></li>
-                            </ul>
-                        </li>
-                    </ul>
-                </li>
-                <li><a href="#">A cerca de Nosotros</a>
-                    <ul>
-                        <li><a href="#">Historia</a></li>
-                        <li><a href="#">Misi&oacute;n</a></li>
-                        <li><a href="#">Visi&oacute;n</a></li>
-                    </ul>
-                </li>
-                <li><a href="#">Contactos</a></li>
-                <li><a href="Login.jsp">Login</a></li>
-            </ul>
-        </nav>
+    <body class="homepage">
+        <div id="page-wrapper">
+
+            <!-- Header -->
+            <div id="header">
+                <div class="container">
+
+                    <!-- Logo -->
+                    <div id="logo">
+                        <span class="pennant"><span class="icon fa-tint"></span></span>
+                        <h1><a href="index.html">Drilling Tech</a></h1>
+                    </div>
+
+                    <!-- Nav -->
+                    <nav id="nav">
+                        <ul>
+                            <li class="active"><a href="index.html">Inicio</a></li>
+                            <li><a href="Catalogo.jsp">Catalogo</a></li>
+                            <li><a href="Contactos.jsp">Contactos</a></li>
+                            <li>
+                                <a href="#" class="icon fa-caret-down">Ejemplo Menu</a>
+                                <ul>
+                                    <li><a href="#">Ejemplo Menu</a></li>
+                                    <li><a href="#">Ejemplo Menu</a></li>
+                                    <li><a href="#">Ejemplo Menu</a></li>
+                                    <li><a href="#">Ejemplo Menu</a></li>
+                                    <li>
+                                        <a href="#">Ejemplo Submenu</a>
+                                        <ul>
+                                            <li><a href="#">Ejemplo Menu</a></li>
+                                            <li><a href="#">Ejemplo Menu</a></li>
+                                            <li><a href="#">Ejemplo Menu</a></li>
+                                            <li><a href="#">Ejemplo Menu</a></li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li><a href="Login.jsp">Login</a></li>
+                        </ul>
+                    </nav>
+
+                </div>
+            </div>
+
+            <!-- Banner -->
+            <div id="banner">
+                <div class="container">
+                    <section>
+                        <a class="image full"><img style="width: 55%; height: 28%;margin-left: 18%;" src="Imagen/banner.png" alt="" /></a>
+                    </section>
+                </div>
+            </div>
+
+            <!-- Featured -->
+            <div id="featured">
+                <section class="container">
+                    <header>
+                        <h2>Drilling Tech</h2>
+                        <span class="byline">Eslogan de la Empresa Aquí...</span>
+                    </header>
+                </section>
+            </div>
+
+            <!-- Main -->
+            <div id="main">
+                <section class="container">
+                    <div class="row">
+                        <section class="4u 12u(mobile)">
+                            <a href="Historia.jsp" class="image full" ><img  src="Imagen/historia.png" alt="" /></a>
+                            <div class="box">
+                                <h3><a href="Historia.jsp">Historia</a></h3>
+                            </div>
+                        </section>
+                        <section class="4u 12u(mobile)">
+                            <a href="Mision.jsp" class="image full"><img src="Imagen/mision.png" alt="" /></a>
+                            <div class="box">
+                                <h3><a href="Mision.jsp">Misión</a></h3>
+                            </div>
+                        </section>
+                        <section class="4u 12u(mobile)">
+                            <a href="Vision.jsp" class="image full"><img src="Imagen/vision.jpg" alt="" /></a>
+                            <div class="box">
+                                <h3><a href="Vision.jsp">Visión</a></h3>
+                            </div>
+                        </section>
+                    </div>					
+                    <h2>Bienvenidos a nuestro Sitio Web</h2>
+                </section>
+            </div>
+
+            <!-- Footer -->
+            <div id="footer">
+                <div class="container">
+                    <section>
+                        <div class="row">
+                            <div class="4u 12u(mobile)">
+                                <header>
+                                    <h2>Historia</h2>
+                                </header>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur sit amet egestas eros. Sed venenatis est nunc, id convallis tellus venenatis non. Proin id nisi euismod, molestie nisl vel, accumsan sem. Integer felis sem, lacinia eu auctor eget, dapibus feugiat elit. Duis lectus justo, ultrices ac placerat non, sollicitudin at massa.</p>
+                                <a href="Historia.jsp" class="button">Mas</a>
+                            </div>
+                            <div class="4u 12u(mobile)">
+                                <header>
+                                    <h2>Misión</h2>
+                                </header>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur sit amet egestas eros. Sed venenatis est nunc, id convallis tellus venenatis non. Proin id nisi euismod, molestie nisl vel, accumsan sem. Integer felis sem, lacinia eu auctor eget, dapibus feugiat elit. Duis lectus justo, ultrices ac placerat non, sollicitudin at massa.</p>
+                                <a href="Mision.jsp" class="button">Mas</a>								
+                            </div>
+                            <div class="4u 12u(mobile)">
+                                <header>
+                                    <h2>Visión</h2>
+                                </header>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur sit amet egestas eros. Sed venenatis est nunc, id convallis tellus venenatis non. Proin id nisi euismod, molestie nisl vel, accumsan sem. Integer felis sem, lacinia eu auctor eget, dapibus feugiat elit. Duis lectus justo, ultrices ac placerat non, sollicitudin at massa.</p>
+                                <a href="Vision.jsp" class="button">Mas</a>								
+                            </div>
+                        </div>								
+                    </section>
+
+                    <!-- Social -->
+                    <section>
+                        <ul class="icons">
+                            <li><a href="#" class="icon fa-twitter"><span>Twitter</span></a></li>
+                            <li><a href="#" class="icon fa-facebook"><span>Facebook</span></a></li>
+                            <li><a href="#" class="icon fa-google-plus"><span>Google+</span></a></li>
+                            <li><a href="#" class="icon fa-linkedin"><span>Linkedin</span></a></li>
+                            <li><a href="#" class="icon fa-pinterest"><span>Pinterest</span></a></li>
+                        </ul>
+                    </section>
+
+                    <!-- Copyright -->
+                    <div class="copyright">
+                        &copy; DrillTech | <a href="">Venta de Productos para la Minería</a>								
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Scripts -->
+        <script src="js/main.js" type="text/javascript"></script>
+        <script src="js/jquery.dropotron.min.js" type="text/javascript"></script>
+        <script src="js/skel.min.js" type="text/javascript"></script>
+        <script src="js/util.js" type="text/javascript"></script>
+        <script src="js/main.js" type="text/javascript"></script>
     </body>
 </html>

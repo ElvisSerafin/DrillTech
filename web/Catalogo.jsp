@@ -54,7 +54,7 @@
                         <a href="CuentaAdministrador.jsp" class="link" id="lnkAdm">Administrar</a>
                     </td>
                     <td>
-                        <a href="Login.jsp" class="btn btn-primary" id="lnkLogin">Login</a>
+                        <a href="Login.jsp" class="link" id="lnkLogin">Login</a>
                     </td>
                     <td>
                         <a href="ServletUsuario?accion=logout" class="link" id="lnkLogout">Salir</a>

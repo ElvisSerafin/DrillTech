@@ -12,7 +12,7 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>JSP Page</title>
+        <title>Registrar Cliente</title>
         <script type="text/javascript" src="js/jquery-1.4.2.min.js"></script>
         <script type="text/javascript" src="js/RegistrarCliente.js"></script>
         <link type="text/css" rel="stylesheet" href="css/css1.css" />
@@ -20,7 +20,7 @@
     </head>
 
     <body>
-        <form name="frm" action="ServletUsuario" method="post" id="frmRegistrarUsuario">
+        <form name="frm" action="ServletUsuario" method="post" id="">
             <input type="hidden" name="accion" value="registrar">
             <table id="tablaRegistrarUsuario">
                 <tr>
