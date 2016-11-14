@@ -14,52 +14,36 @@
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <script type="text/javascript" src="js/jquery-1.4.2.min.js"></script>
         <script type="text/javascript" src="js/RegistrarMP.js"></script>
-        <link type="text/css" rel="stylesheet" href="css/css1.css" />
+        <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
         <title>JSP Page</title>
     </head>
-    
+
     <%
         int Codigo_MP = ObtenerId.idProducto();
     %>
-    
+
     <body onload="cargar()">
-        <form name="frm" action="ServletMarca_Producto" method="post" id="frmRegistrarMP">
-            <table id="tablaRegistrarMP">
-                <tr>
-                    <th colspan="2">
-                        <h1>Registrar marca producto</h1>
-                    </th>
-                </tr>
-                <tr>
-                    <td class="primeraColumna">
-                        Codigo :
-                    </td>
-                    <td>
-                        <dd> <input type="text" name="txtCodigo" value="<%=Codigo_MP %>" readonly="readonly">  </dd>
-                    </td>
-                </tr>
-                <tr>
-                    <td class="primeraColumna">
-                        Marca producto :
-                    </td>
-                    <td>
-                        <dd> <input type="text" name="txtNombre" id="txtNombre" class="textBox"> </dd>
-                    </td>
-                </tr>
-                <tr>
-                    <td colspan="2" class="Botones">
-                        <br>
-                        <input type="button" name="btnCancelar" id="btnCancelar" class="button" value="Cancelar"> 
-                        <input type="button" name="btnRegistrar" id="btnRegistrar" class="button" value="Registrar"> 
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        <br>
-                    </td>
-                </tr>
-            </table>
-                    <input type="hidden" name="accion" value="insertar">
-        </form>
-    </body>
+        <form name="frm" action="ServletMarca_Producto" method="post">
+            <div style="margin-left: 35%; margin-right: 35%; margin-top: 5%; ">
+                <h2><a>Registrar</a> | <a>Marca Producto</a></h2>
+                <br>
+                <div class="form-group">
+                    <label>Codigo:</label>
+                    <input type="text" name="txtCodigo" value="<%=Codigo_MP%>" class="form-control form-control" readonly="readonly">
+                </div>
+                <div class="form-group">
+                    <label>Marca productos:</label>
+                    <input type="text" name="txtNombre" id="txtNombre" class="form-control form-control" >
+                </div>
+                <br>
+                <center><div>
+                        <input type="submit" name="btnRegistrar" id="btnRegistrar" class="btn btn-primary" value="Registrar">
+                        <input type="button" name="btnCancelar" id="btnCancelar" class="btn btn-danger" value="Cancelar">
+                        <input type="hidden" name="accion" value="insertar">
+
+                    </div>
+                </center>
+            </div>
+    </form>
+</body>
 </html>

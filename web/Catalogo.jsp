@@ -1,8 +1,8 @@
 <%@taglib prefix="sql" uri="http://java.sun.com/jsp/jstl/sql"%>
 <%-- 
     Document   : Catalogo
-    Created on : 23/10/2016, 02:14:26 PM
-    Author     : Elvis
+    Created on : 09-oct-2015, 11:18:36
+    Author     : Daniel
 --%>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
@@ -17,26 +17,27 @@
         <script type="text/javascript" src="js/Catalogo.js"></script>
         <link type="text/css" rel="stylesheet" href="css/css1.css" />
         <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
-        <title>Catalogo de Productos</title>
+        
+        <title>Catalogo</title>
         
     </head>
     
     <body onload="cargar()">
         
         <%
-            int codigo = -1;
-            try{
-                codigo=Integer.parseInt(session.getAttribute("parametroId").toString());
-            }catch(Exception e){
+             int codigo = -1;
+            try {
+                codigo = Integer.parseInt(session.getAttribute("parametroId").toString());
+            } catch (Exception e) {
                 e.printStackTrace();
             }
-            
+
             UsuarioDTO usu = UsuarioDAO.listarUsuarioPorId(codigo);
             String cliente = usu.getNombre() + ", " + usu.getApellidos();
         %>
         
         <form action="ServletUsuario" method="post" id="frmCabecera">
-            <input type="hidden" value="<%=usu.getTipo() %>" name="txtTipo" id="txtTipo">
+            <input type="hidden" value="<%=usu.getTipo()%>" name="txtTipo" id="txtTipo">
             <table id="tablaCabecera">
                 <tr>
                     <td colspan="5">
@@ -48,7 +49,7 @@
                         <a href="RegistrarVenta.jsp" class="link" id="lnkCompra"><h4>Mi compra</h4></a>
                     </td>
                     <td>
-                        <a href="MiPerfil.jsp?idU=<%=usu.getIdUsuario() %>" class="link" id="lnkPerfil">Mi cuenta</a>  
+                        <a href="MiPerfil.jsp?idU=<%=usu.getIdUsuario()%>" class="link" id="lnkPerfil">Mi cuenta</a>  
                     </td>
                     <td>
                         <a href="CuentaAdministrador.jsp" class="link" id="lnkAdm">Administrar</a>
@@ -70,24 +71,24 @@
             <table width="800" id="tablaCatalogo">
                 <tr>
                     <th colspan="3">
-                <h6 class="form-inline"> Catalogo de productos </h6>
+                        <h1> Catalogo de productos </h1>
                     </th>
                 </tr>
                 
                 <tbody>
                 <%
                     ArrayList<ProductoDTO> lista = ProductoDAO.obtenerProductosHabilitados();
-                    int salto = 0;
-                    for(int i=0; i<lista.size(); i++){
-                        ProductoDTO p = lista.get(i);
+                        int salto = 0;
+                        for (int i = 0; i < lista.size(); i++) {
+                            ProductoDTO p = lista.get(i);
                 %>
                         
-                            <th><img src="Imagen/<%=p.getImagenP()%>" width="100" height="100"><br>
+                            <th><img src="Imagen/<%=p.getImagenP() %>" width="100" height="100"><br>
                                 <%=p.getClase_Producto()%> <%=p.getMarca_Producto()%> <br>
                                 <%=p.getDescripcion()%><br>
                                 S/ <%=p.getPrecioP() %><br>
-                            <input type="button" class="BotonModificar" name="btnModificar" value="Modificar" onclick="location.href='ModificarProducto.jsp?idProducto=<%=p.getIdProducto()%>'">
-                            <input type="button" class="BotonADD" name="btnADD" value="ADD Carrito" onclick="location.href='AgregarCarrito.jsp?idProducto=<%=p.getIdProducto()%>&&cliente=<%=cliente %>'"><br>
+                            <input type="button" class="BotonModificar btn btn-danger" name="btnModificar" value="Modificar" onclick="location.href= 'ModificarProducto.jsp?idProducto=<%=p.getIdProducto()%>'">
+                            <input type="button" class="BotonADD btn btn-success" name="btnADD" value="ADD Carrito" onclick="location.href='AgregarCarrito.jsp?idProducto=<%=p.getIdProducto()%>&&cliente=<%=cliente%>'"><br>
                             </th>
                 <%
                         salto++;
