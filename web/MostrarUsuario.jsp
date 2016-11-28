@@ -13,31 +13,25 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <link type="text/css" rel="stylesheet" href="css/css1.css" />
+        <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
         <title>JSP Page</title>
     </head>
     <body>
-        <form id="frmMostrarCabeceraUsuario">
-            <table id="tablaMostrarCabeceraUsuario">
-                <tr>
-                    <th>
-                        <h1> Usuarios habilitados </h1>
-                    </th>
-                </tr>
-                <tr>
-                    <td>
-                        <a href="CuentaAdministrador.jsp" class="link"><h4> Pagina principal </h4></a>
-                    </td>
-                </tr>
-            </table>
-        </form>
+        
+        <div style="margin-left: 12%; margin-right: 12%; margin-top: 2%; ">
+            <center><h1 style="color: #0035B0;">Usuarios habilitados</h1></center>
+            <br>
+            <div>
+                <center><a href="CuentaAdministrador.jsp" class="link"><h4> Pagina principal </h4></a></center>
+            </div>
         
         <hr>
         
-        <form id="frmMostrarCuerpoUsuario">
-            <table id="tablaMostrarCuerpoUsuario">
+        <form>
+            <table class="table table-hover">
                 <tr>
                     <th class="Titulo">
-                        CODIGO
+                        ID
                     </th>
                     <th class="Titulo">
                         NOMBRE
@@ -103,7 +97,7 @@
                         <%=usu.getEstado()%>
                     </td>
                     <td class="Opcion">
-                        <input type="button" name="btnEliminar" value="Eliminar" id="btnEliminar" class="button" onclick="location.href='Servlet_Usu?codigoU=<%=usu.getIdUsuario()%>&&accion=eliminar'">
+                        <input type="button" name="btnEliminar" value="Eliminar" id="btnEliminar" class="btn btn-danger" onclick="location.href='ServletUsuario?idU=<%=usu.getIdUsuario()%>&&accion=eliminar'">
                     </td>
                 </tr>
                 
@@ -113,5 +107,6 @@
 
             </table>
         </form>
+        </div>
     </body>
 </html>

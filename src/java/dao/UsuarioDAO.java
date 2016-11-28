@@ -104,7 +104,7 @@ public class UsuarioDAO {
         cn = con.conectar();
         
         try{
-            CallableStatement cs = cn.prepareCall("CALL REGISTRAR_USUARIO (?,?,?,?,?,?,?,?,?,?,?)");
+            CallableStatement cs = cn.prepareCall("{CALL REGISTRAR_USUARIO_CLIENTE (?,?,?,?,?,?,?,?,?,?,?)}");
             cs.setString(1, usu.getNombre());
             cs.setString(2, usu.getApellidos());
             cs.setString(3, usu.getDni());

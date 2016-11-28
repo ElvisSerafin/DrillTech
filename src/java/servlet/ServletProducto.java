@@ -5,6 +5,8 @@
  */
 package servlet;
 
+import dao.Clase_ProductoDAO;
+import dao.Marca_ProductoDAO;
 import dao.ProductoDAO;
 import dto.Detalle_VentaDTO;
 import dto.ProductoDTO;
@@ -56,16 +58,27 @@ public class ServletProducto extends HttpServlet {
             if(accion.equals("anadirCarrito")){
                 this.AgregarCarrito(request, response);
             }
+            if (accion.equals("agregarProducto")) {
+                request.getSession().setAttribute("listcp", Clase_ProductoDAO.ObtenerCPHabilitados());
+                request.getSession().setAttribute("listmp", Marca_ProductoDAO.obtenerMPHabilitados());
+                response.sendRedirect("RegistrarProducto.jsp");
+            }
+             if (accion.equals("editarProducto")) {
+                request.getSession().setAttribute("listcp", Clase_ProductoDAO.ObtenerCPHabilitados());
+                request.getSession().setAttribute("listmp", Marca_ProductoDAO.obtenerMPHabilitados());
+                response.sendRedirect("ModificarProducto.jsp?idProducto=" + request.getParameter("idProducto"));
+            }
         }
     }
     
      private void RegistrarProducto(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         ProductoDTO p = new ProductoDTO();
-        p.setClase_Producto(request.getParameter("txtClase")); 
-        p.setMarca_Producto(request.getParameter("txtMarca"));
+        p.setIdClase_Producto(Integer.parseInt(request.getParameter("claseproducto")));
+        p.setIdMarca_Producto(Integer.parseInt(request.getParameter("marcaproducto")));
         p.setDescripcion(request.getParameter("txtDescripcion"));
         p.setPrecioP(Double.parseDouble(request.getParameter("txtPrecio")));
+        p.setStockP(Double.parseDouble(request.getParameter("txtStock")));
         p.setImagenP(request.getParameter("txtImagen")); 
         
         boolean resp = ProductoDAO.insertarProducto(p);
@@ -80,10 +93,11 @@ public class ServletProducto extends HttpServlet {
             throws ServletException, IOException {
         ProductoDTO p = new ProductoDTO();
         p.setIdProducto(Integer.parseInt(request.getParameter("txtCodigo"))); 
-        p.setClase_Producto(request.getParameter("txtNombreCP")); 
-        p.setMarca_Producto(request.getParameter("txtNombreMP"));
+        p.setIdClase_Producto(Integer.parseInt(request.getParameter("claseproducto")));
+        p.setIdMarca_Producto(Integer.parseInt(request.getParameter("marcaproducto")));
         p.setDescripcion(request.getParameter("txtDescripcionP"));
         p.setPrecioP(Double.parseDouble(request.getParameter("txtPrecioP")));
+        p.setStockP(Double.parseDouble(request.getParameter("txtStockP")));
         
         String imagen = request.getParameter("selected");
         
@@ -104,7 +118,7 @@ public class ServletProducto extends HttpServlet {
     private void DarBajaProducto(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         ProductoDTO p = new ProductoDTO();
-        p.setIdProducto(Integer.parseInt(request.getParameter("codigoP"))); 
+        p.setIdProducto(Integer.parseInt(request.getParameter("idProducto"))); 
         
         boolean resp = ProductoDAO.eliminarProducto(p);
         if(resp){

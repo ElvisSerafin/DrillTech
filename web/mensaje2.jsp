@@ -1,7 +1,7 @@
 <%-- 
     Document   : mensaje2
-    Created on : 08-nov-2015, 13:46:00
-    Author     : Daniel
+    Created on : 04-nov-2016, 11:44:08
+    Author     : Elvis
 --%>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
@@ -10,10 +10,11 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <link type="text/css" rel="stylesheet" href="css/css1.css" />
+        <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
         <title>JSP Page</title>
     </head>
     <body>
-        <h1 align="center">
+        <h1 align="center" class="alert alert-danger">
             <%
                 if(request.getParameter("mens")!=null){
                     out.println(request.getParameter("mens"));

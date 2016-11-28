@@ -33,6 +33,7 @@ public class Clase_ProductoDAO {
         }catch(Exception e){ 
             System.out.println(e);
         }
+        System.out.println(lista.size());
         return lista;
     }
     

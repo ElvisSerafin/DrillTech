@@ -13,32 +13,25 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <link type="text/css" rel="stylesheet" href="css/css1.css" />
+        <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
         <title>JSP Page</title>
     </head>
     
     <body>
-        <form id="frmMostrarCabeceraProdEliminados">
-            <table id="tablaMostrarCabeceraProdEliminados">
-                <tr>
-                    <th>
-                        <h1> Productos habilitados </h1>
-                    </th>
-                </tr>
-                <tr>
-                    <td>
-                        <a href="CuentaAdministrador.jsp" class="link"><h4> Pagina principal </h4></a>
-                    </td>
-                </tr>
-            </table>
-        </form>
         
-        <hr>
-        
-        <form id="frmMostrarCuerpoProdEliminados">
-            <table id="tablaMostrarCuerpoProdEliminados">
+         <div style="margin-left: 12%; margin-right: 12%; margin-top: 2%; ">
+             <center><h1 style="color: #337ab7;">Productos Eliminados</h1></center>
+            <br>
+            <div>
+                <center><a href="CuentaAdministrador.jsp" class="link"><h4> Pagina principal </h4></a></center>
+            </div>
+
+
+            <form>
+                <table class="table table-hover">
                 <tr>
                     <th class="Titulo">
-                        CODIGO
+                        ID
                     </th>
                     <th class="Titulo">
                         CLASE
@@ -58,7 +51,7 @@
                     <th class="Titulo">
                         ESTADO
                     </th>
-                    <th class="Titulo">
+                    <th colspan="2" class="Titulo">
                         OPCION
                     </th>
                 </tr>
@@ -92,7 +85,7 @@
                         <%=P.getEstadoP() %>
                     </td>
                     <td class="Opcion">
-                        <input type="button" name="btnRecuperar" id="btnRecuperar" class="button" value="Recuperar" onclick="location.href='Servlet_Prod?codigoP=<%=P.getIdProducto() %>&&accion=recuperar'">
+                       <input type="button" name="btnRecuperar" id="btnRecuperar" class="btn btn-warning" value="Recuperar" onclick="location.href='ServletProducto?idProducto=<%=P.getIdProducto() %>&&accion=recuperar'">
                     </td>
                 </tr>
                 
@@ -101,6 +94,8 @@
                 %>
     
             </table>
-        </form>
+            </form>
+        </div>
+        <hr>
     </body>
 </html>

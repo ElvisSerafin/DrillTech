@@ -1,6 +1,6 @@
 $(document).ready(function(){
     $('#btnCancelar').click(function(){
-        $(location).attr('href',"MostrarMP.jsp");
+        $(location).attr('href',"MostrarMarca_Producto.jsp");
     });
     
     $('#btnGuardar').click(function(){

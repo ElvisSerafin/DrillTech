@@ -15,29 +15,19 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <link type="text/css" rel="stylesheet" href="css/css1.css" />
+        <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
         <title>JSP Page</title>
     </head>
     <body>
-        
-        <form id="frmMostrarCabeceraVenta">
-            <table id="tablaMostrarCabeceraVenta">
-                <tr>
-                    <th>
-                        <h1> Pedidos realizados </h1>
-                    </th>
-                </tr>
-                <tr>
-                    <td>
-                        <a href="CuentaAdministrador.jsp" class="link"><h4> Pagina principal </h4></a>
-                    </td>
-                </tr>
-            </table>
-        </form>
-        
+       <div style="margin-left: 15%; margin-right: 15%; margin-top: 2%; ">
+           <center><h1 style="color: #337ab7;">Clase de Productos Habilitados</h1></center>
+            <br>
+            <div>
+                <center><a href="CuentaAdministrador.jsp" class="link"><h4> Pagina principal </h4></a></center>
+            </div>
         <hr>
-        
-        <form id="frmMostrarCuerpoVenta">
-            <table id="tablaMostrarCuerpoVenta">
+        <form>
+            <table class="table table-hover">
                 <tr>
                     <th class="Titulo">
                         CODIGO
@@ -81,10 +71,10 @@
                         <%=v.getFecha() %>
                     </td>
                     <td class="Opcion">
-                        <input type="button" name="btnDetalle" id="btnDetalle" class="button" value="Detalle venta" onclick="location.href='ServletVenta?idVenta=<%=v.getIdVenta() %>&&cliente=<%=v.getUsuario() %>&&importe=<%=v.getTotal() %>&&FechaV=<%=v.getFecha() %>&&codigoCli=<%=v.getIdUsuario() %>&&accion=MostrarDetalle'">
+                        <input type="button" name="btnDetalle" id="btnDetalle" class="btn btn-success" value="Detalle venta" onclick="location.href='ServletVenta?idVenta=<%=v.getIdVenta() %>&&cliente=<%=v.getUsuario() %>&&importe=<%=v.getTotal() %>&&FechaV=<%=v.getFecha() %>&&iduser=<%=v.getIdUsuario() %>&&accion=MostrarDetalle'">
                     </td>
                     <td class="Opcion">
-                        <input type="button" name="btnEliminar" id="btnEliminar" class="button" value="Eliminar" onclick="location.href='ServletVenta?idVenta=<%=v.getIdVenta() %>&&accion=EliminarVenta'"> 
+                        <input type="button" name="btnEliminar" id="btnEliminar" class="btn btn-danger" value="Eliminar" onclick="location.href='ServletVenta?idVenta=<%=v.getIdVenta() %>&&accion=EliminarVenta'"> 
                     </td>
                 </tr>
                 
@@ -94,6 +84,6 @@
 
             </table>
         </form>
-        
+       </div>
     </body>
 </html>

@@ -13,6 +13,7 @@
         <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
         <link href="css/Login.css" rel="stylesheet" type="text/css"/>
         <script src="js/Login.js" type="text/javascript"></script>
+         <link href='Imagen/DT.png' rel='shortcut icon' type='image/png'/>
         <title>Login</title>
     </head>
     <body>

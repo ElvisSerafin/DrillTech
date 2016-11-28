@@ -23,71 +23,58 @@
             <div style="margin-left: 30%; margin-right: 30%; margin-top: 2%; ">
                 <h2><a>Registrate</a> | <a>Ahora</a></h2>
                 <br>
-                <div class="form-group">
-                    <label>Nombres :</label>
+                <div class="form-group has-success">
                     <input type="text" name="txtNombres" id="txtNombre" class="form-control form-control" placeholder="Nombres" size="30" maxlength="50">
                 </div>
-                <div class="form-group">
-                    <label>Apellidos :</label>
+                <div class="form-group has-success">
                     <input type="text" name="txtApellidos" id="txtApellido" class="form-control form-control" placeholder="Apellidos" size="30" maxlength="50"> 
                 </div>
-                <div class="form-group">
-                    <label>Dni :</label>
+                <div class="form-group has-success">
                     <input type="text" name="txtDni" id="txtDni" class="form-control form-control" placeholder="DNI" size="30" maxlength="8"> 
                 </div>
 
-                <div class="form-group">
-                    <label>Email :</label>
-                    <input type="text" name="txtEmail" id="txtEmail" class="form-control form-control" placeholder="Correo electronico" size="30" maxlength="50"> 
+                <div class="form-group has-success">
+                    <input type="text" name="txtEmail" id="txtEmail" class="form-control form-control" placeholder="Correo Electronico" size="30" maxlength="50"> 
                 </div>
 
-                <div class="form-group">
-                    <label>Confirmar Email :</label>
-                    <input type="text" name="txtConfirmarEmail" id="txtConfirEmail" class="form-control form-control" placeholder="Confirme correo electronico" size="30" maxlength="50">
+                <div class="form-group has-success">
+                    <input type="text" name="txtConfirmarEmail" id="txtConfirEmail" class="form-control form-control" placeholder="Confirme Correo Electronico" size="30" maxlength="50">
                 </div>
 
-                <div class="form-group">
-                    <label>Departamento :</label>
+                <div class="form-group has-success">
                     <input type="text" name="txtDepartamento" id="txtDepartamento" class="form-control form-control" placeholder="Departamento" size="30" maxlength="20"> 
                 </div>
 
-                <div class="form-group">
-                    <label>Provincia :</label>
+                <div class="form-group has-success">
                     <input type="text" name="txtProvincia" id="txtProvincia" class="form-control form-control" placeholder="Provincia" size="30" maxlength="20"> 
                 </div>
 
-                <div class="form-group">
-                    <label>Distrito :</label>
+                <div class="form-group has-success">
                     <input type="text" name="txtDistrito" id="txtDistrito" class="form-control form-control" placeholder="Distrito" size="30" maxlength="20"> 
                 </div>
 
-                <div class="form-group">
-                    <label>Direccion :</label>
-                    <input type="text" name="txtDireccion" id="txtDireccion" class="form-control form-control" placeholder="Direccion" size="30" maxlength="50"> 
+                <div class="form-group has-success">
+                    <input type="text" name="txtDireccion" id="txtDireccion" class="form-control form-control" placeholder="Dirección" size="30" maxlength="50"> 
                 </div>
 
-                <div class="form-group">
-                    <label>Telefono :</label>
+                <div class="form-group has-success">
                     <input type="text" name="txtTelefono" id="txtTelefono" class="form-control form-control" placeholder="Telefono o Celular" size="30" maxlength="9">
                 </div>
 
-                <div class="form-group">
-                    <label>Usuario :</label>
-                    <input type="text" name="txtUsuario" id="txtUsuario" class="form-control form-control" placeholder="Cree un usuario" size="30" maxlength="30">
+                <div class="form-group has-success">
+                    <input type="text" name="txtUsuario" id="txtUsuario" class="form-control form-control" placeholder="Cree un Usuario" size="30" maxlength="30">
                 </div>
 
-                <div class="form-group">
-                    <label>Contraseña :</label>
-                    <input type="password" name="txtClave" id="txtClave" class="form-control form-control" placeholder="Cree una contraseña" size="30" maxlength="20">
+                <div class="form-group has-success">
+                    <input type="password" name="txtClave" id="txtClave" class="form-control form-control" placeholder="Cree una Contraseña" size="30" maxlength="20">
                 </div>
 
-                <div class="form-group">
-                    <label>Confirmar Contraseña :</label>
-                    <input type="password" name="txtConfirmarClave" id="txtConfirClave" class="form-control form-control" placeholder="Confirme su contraseña" size="30" maxlength="20">
+                <div class="form-group has-success">
+                    <input type="password" name="txtConfirmarClave" id="txtConfirClave" class="form-control form-control" placeholder="Confirme su Contraseña" size="30" maxlength="20">
                 </div>
                 <center><div>
                         <input type="button" name="btnCancelar" id="btnCancelar" class="btn btn-danger" value="Cancelar">
-                        <input type="button" name="btnRegistrar" id="btnRegistrar" class="btn btn-success" value="Registrar">
+                        <input type="submit" name="btnRegistrar" id="btnRegistrar" class="btn btn-success" value="Registrar">
                     </div>
                 </center>
                 <br>

@@ -51,19 +51,15 @@ body{
 }
 
 #btnCancelar{
-    width: 100px;
-    background-color: #BC0C0C;
-    border-color: #BC0C0C;
-    color: #FFFFFF;
-    padding: 3px 2px 2px 2px;
+    color: #fff;
+    background-color: #d9534f;
+    border-color: #d43f3a;
 }
 
 #btnRegistrar{
-    width: 100px;
-    background-color: #011490;
-    border-color: #011490;
-    color: #FFFFFF;
-    padding: 3px 2px 2px 2px;
+    color: #fff;
+    background-color: #337ab7;
+    border-color: #2e6da4;
 }
 
 .Botones{
@@ -227,17 +223,13 @@ body{
 #btnModificar{
     background-color: #FFCE29;
     color: #000000;
-    width: 90px;
     border-color: #FFCE29;
-    padding: 3px 2px 2px 2px;
 }
 
 #btnEliminar{
-    background-color: #F21400;
-    color: #FFFFFF;
-    width: 90px;
-    border-color: #F21400;
-    padding: 3px 2px 2px 2px;
+    color: #fff;
+    background-color: #d9534f;
+    border-color: #d43f3a;
 }
 
 
@@ -310,11 +302,9 @@ body{
 /* Mostrar clase productos eliminados */
 
 #btnRecuperar{
-    background-color: #FFF300;
-    color: #000000;
-    width: 100px;
-    border-color: #FFF300;
-    padding: 3px 2px 2px 2px;
+    color: #fff;
+    background-color: #f0ad4e;
+    border-color: #eea236;
 }
 
 #frmMostrarCabeceraCPEliminados{
@@ -419,9 +409,7 @@ body{
 #btnDetalle{
     background-color: #E3D800;
     color: #000000;
-    width: 100px;
     border-color: #E3D800;
-    padding: 3px 2px 2px 2px;
 }
 
 #frmMostrarCabeceraVenta{
@@ -523,11 +511,9 @@ body{
 }
 
 #btnGuardar{
-    background-color: #0206F0;
-    color: #FFFFFF;
-    width: 100px;
-    border-color: #0206F0;
-    padding: 3px 2px 2px 2px;
+    color: #fff;
+    background-color: #337ab7;
+    border-color: #2e6da4;
 }
 
 
@@ -593,11 +579,9 @@ body{
 }
 
 #btnRegistrarVenta{
-    background-color: #10E414;
-    color: #000000;
-    width: 150px;
-    border-color: #10E414;
-    padding: 4px 3px 3px 3px;
+    color: #fff;
+    background-color: #337ab7;
+    border-color: #2e6da4;
 }
 
 

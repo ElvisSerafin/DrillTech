@@ -25,14 +25,14 @@
     <body onload="cargar()">
         <form name="frm" action="ServletMarca_Producto" method="post">
             <div style="margin-left: 35%; margin-right: 35%; margin-top: 5%; ">
-                <h2><a>Registrar</a> | <a>Marca Producto</a></h2>
+                <h2 style="color: #337ab7;">Registrar | Marca Producto</h2>
                 <br>
                 <div class="form-group">
                     <label>Codigo:</label>
                     <input type="text" name="txtCodigo" value="<%=Codigo_MP%>" class="form-control form-control" readonly="readonly">
                 </div>
                 <div class="form-group">
-                    <label>Marca productos:</label>
+                    <label>Marca de Producto:</label>
                     <input type="text" name="txtNombre" id="txtNombre" class="form-control form-control" >
                 </div>
                 <br>

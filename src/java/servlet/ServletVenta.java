@@ -118,11 +118,11 @@ public class ServletVenta extends HttpServlet {
             throws ServletException, IOException {
         PrintWriter out = response.getWriter();
 
-        request.getSession().setAttribute("idVenta", request.getParameter("codigoV"));
-        request.getSession().setAttribute("Usuario", request.getParameter("cliente"));
+        request.getSession().setAttribute("idVenta", request.getParameter("idVenta"));
+        request.getSession().setAttribute("Cliente", request.getParameter("cliente"));
         request.getSession().setAttribute("Importe", request.getParameter("importe"));
         request.getSession().setAttribute("FechaVenta", request.getParameter("FechaV")); 
-        request.getSession().setAttribute("idCliente", request.getParameter("codigoCli")); 
+        request.getSession().setAttribute("idCliente", request.getParameter("iduser")); 
 
         response.sendRedirect("MostrarDetalleVenta.jsp"); 
     }

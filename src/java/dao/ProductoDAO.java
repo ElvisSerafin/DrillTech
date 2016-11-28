@@ -33,7 +33,7 @@ public class ProductoDAO {
             cs = cn.prepareCall("{CALL MOSTRAR_PRODUCTOS_HABILITADOS()}");
             rs = cs.executeQuery();
             while (rs.next()) {
-                ProductoDTO p = new ProductoDTO(rs.getInt("idProducto"), rs.getInt("idClase_Producto"), rs.getString("Clase_P"), rs.getInt("idMarca_Producto"),rs.getString("Marca_P"), rs.getString("Descripcion_P"), rs.getDouble("Precio_P"), rs.getString("Imagen_P"), rs.getString("Estado_P"));
+                ProductoDTO p = new ProductoDTO(rs.getInt("idProducto"), rs.getInt("idClase_Producto"), rs.getString("Clase_P"), rs.getInt("idMarca_Producto"), rs.getString("Marca_P"), rs.getString("Descripcion_P"), rs.getDouble("Precio_P"), rs.getDouble("Stock_P"), rs.getString("Imagen_P"), rs.getString("Estado_P"));
                 lista.add(p);
             }
 
@@ -57,7 +57,7 @@ public class ProductoDAO {
             cs = cn.prepareCall("{CALL MOSTRAR_PRODUCTOS_ELIMINADOS()}");
             rs = cs.executeQuery();
             while (rs.next()) {
-                ProductoDTO p = new ProductoDTO(rs.getInt("idProducto"), rs.getInt("idClase_Producto"), rs.getString("Clase_P"), rs.getInt("idMarca_Producto"), rs.getString("Marca_P"), rs.getString("Descripcion_P"), rs.getDouble("Precio_P"), rs.getString("Imagen_P"), rs.getString("Estado_P"));
+                ProductoDTO p = new ProductoDTO(rs.getInt("idProducto"), rs.getInt("idClase_Producto"), rs.getString("Clase_P"), rs.getInt("idMarca_Producto"), rs.getString("Marca_P"), rs.getString("Descripcion_P"), rs.getDouble("Precio_P"), rs.getDouble("Stock_P"), rs.getString("Imagen_P"), rs.getString("Estado_P"));
                 lista.add(p);
             }
 
@@ -76,12 +76,13 @@ public class ProductoDAO {
         cn = con.conectar();
 
         try {
-            CallableStatement cs = cn.prepareCall("CALL REGISTRAR_PRODUCTO (?,?,?,?,?)");
+            CallableStatement cs = cn.prepareCall("CALL REGISTRAR_PRODUCTO (?,?,?,?,?,?)");
             cs.setInt(1, p.getIdClase_Producto());
             cs.setInt(2, p.getIdMarca_Producto());
             cs.setString(3, p.getDescripcion());
             cs.setDouble(4, p.getPrecioP());
-            cs.setString(5, p.getImagenP());
+            cs.setDouble(5, p.getStockP());
+            cs.setString(6, p.getImagenP());
             int i = cs.executeUpdate();
 
             if (i == 1) {
@@ -104,13 +105,14 @@ public class ProductoDAO {
         cn = con.conectar();
 
         try {
-            CallableStatement cs = cn.prepareCall("CALL MODIFICAR_PRODUCTO (?,?,?,?,?,?)");
+            CallableStatement cs = cn.prepareCall("CALL MODIFICAR_PRODUCTO (?,?,?,?,?,?,?)");
             cs.setInt(1, p.getIdProducto());
-            cs.setString(2, p.getClase_Producto());
-            cs.setString(3, p.getMarca_Producto());
+            cs.setInt(2, p.getIdClase_Producto());
+            cs.setInt(3, p.getIdMarca_Producto());
             cs.setString(4, p.getDescripcion());
             cs.setDouble(5, p.getPrecioP());
-            cs.setString(6, p.getImagenP());
+            cs.setDouble(6, p.getStockP());
+            cs.setString(7, p.getImagenP());
             cs.executeUpdate();
 
             int i = cs.executeUpdate();
@@ -189,11 +191,12 @@ public class ProductoDAO {
             cs.setInt(1, id);
             ResultSet rs = cs.executeQuery();
             while (rs.next()) {
-                p.setIdProducto(rs.getInt("idProducto"));
-                p.setClase_Producto(rs.getString("Nombre_CP"));
-                p.setMarca_Producto(rs.getString("Nombre_MP"));
+               p.setIdProducto(rs.getInt("idProducto"));
+                p.setIdClase_Producto(Integer.parseInt(rs.getString("idClase_Producto")));
+                p.setIdMarca_Producto(Integer.parseInt(rs.getString("idMarca_Producto")));
                 p.setDescripcion(rs.getString("Descripcion_P"));
                 p.setPrecioP(rs.getDouble("Precio_P"));
+                p.setStockP(rs.getDouble("Stock_P"));
                 p.setImagenP(rs.getString("Imagen_P"));
             }
         } catch (Exception e) {

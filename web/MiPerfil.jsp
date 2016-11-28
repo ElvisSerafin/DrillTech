@@ -107,7 +107,7 @@
                         <br>
                         <input type="button" name="btnCancelar" id="btnCancelar" class="button btn btn-danger" value="Cancelar">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                         <input type="button" name="btnModificar" id="btnModificar" class="button btn btn-success" value="Modificar">
-                        <input type="button" name="btnGuardar" id="btnGuardar" class="campoOculto btn btn-primary" value="Guardar">
+                        <input type="submit" name="btnGuardar" id="btnGuardar" class="campoOculto btn btn-primary" value="Guardar">
                     </div>
                 </center>
             </div>

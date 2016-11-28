@@ -24,7 +24,7 @@
 									<form id="register-form" action="http://phpoll.com/recover/process" method="post" role="form" autocomplete="off">
 										<div class="form-group">
 											<label for="email">Ingrese Email </label>
-											<input type="email" name="email" id="email" tabindex="1" class="form-control" placeholder="Email " value="" autocomplete="off" required="">
+											<input type="email" name="email" tabindex="1" class="form-control" placeholder="Email " value="" autocomplete="off" required="">
 										</div>
 										<div class="form-group">
 											<div class="row">

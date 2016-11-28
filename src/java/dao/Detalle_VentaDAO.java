@@ -24,7 +24,7 @@ public class Detalle_VentaDAO {
         Conexion con = new Conexion();
         cn = con.conectar();
         try{
-            CallableStatement cs = cn.prepareCall("CALL MOSTRAR_DETALLE_VENTA_POR_ID (?)");
+            CallableStatement cs = cn.prepareCall("{CALL MOSTRAR_DETALLE_VENTA_POR_ID (?)}");
             cs.setInt(1, idVenta);
             ResultSet rs = cs.executeQuery();
             

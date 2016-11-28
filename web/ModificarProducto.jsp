@@ -22,6 +22,11 @@
 
     <%
         ProductoDTO p = ProductoDAO.listarProductoPorId(Integer.parseInt(request.getParameter("idProducto")));
+        int Codigo_P = ObtenerId.idProducto();
+        ArrayList<Clase_Producto> listcp = (ArrayList<Clase_Producto>) session.getAttribute("listcp");
+        session.removeAttribute("listcp");
+        ArrayList<Marca_Producto> listmp = (ArrayList<Marca_Producto>) session.getAttribute("listmp");
+        session.removeAttribute("listmp");
     %>
 
     <body onload="cargar()">
@@ -40,22 +45,43 @@
                         <%=p.getIdProducto()%>
                     </div>
                 </div>
-                <div class="form-group col-lg-12">
-                    <div class="col-lg-4">
-                        <label >Nombre CP :</label>
-                    </div>
+                <div class="form-group">
+                    <label class="col-lg-4">Nombre CP :</label>
                     <div class="col-lg-8">
-                        <input class="form-control" type="text" name="txtNombreCP" id="txtNombreCP" value="<%=p.getClase_Producto()%>" size="30" maxlength="30" readonly="readonly">
+                        <select name="claseproducto" class="form-control">
+                            <%for (int i = 0; i < listcp.size(); i++) {
+                                    if (listcp.get(i).getIdClase_Producto() == p.getIdClase_Producto()) {%>
+                            <option selected="true" value="<%=listcp.get(i).getIdClase_Producto()%>"><%=listcp.get(i).getNombreCP()%></option>
+                            <%} else {%>
+                            <option value="<%=listcp.get(i).getIdClase_Producto()%>"><%=listcp.get(i).getNombreCP()%></option>
+                            <%}
+                                }%>
+                        </select>
                     </div>
                 </div>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
 
-                <div class="form-group col-lg-12">
-                    <div class="col-lg-4">
-                        <label >Nombre MP : </label>
-                    </div>
+                <div class="form-group">
+                    <label class="col-lg-4">Nombre MP:</label>
                     <div class="col-lg-8">
-                        <input type="text" class="form-control" name="txtNombreMP" id="txtNombreMP" value="<%=p.getMarca_Producto()%>" size="30" maxlength="30" readonly="readonly">
+                        <select name="marcaproducto" class="form-control">
+                            <%for (int i = 0; i < listmp.size(); i++) {
+
+                                    if (listmp.get(i).getIdMarca_Producto() == p.getIdMarca_Producto()) {%>
+                            <option selected="true" value="<%=listmp.get(i).getIdMarca_Producto()%>"><%=listmp.get(i).getNombreMP()%></option>
+                            <%} else {%>
+                            <option value="<%=listmp.get(i).getIdMarca_Producto()%>"><%=listmp.get(i).getNombreMP()%></option>
+                            <%}
+                                }%>
+
+                        </select>
                     </div>
+                    <br>
+                    <br>
                 </div>
                 <div class="form-group col-lg-12">
                     <div class="col-lg-4">
@@ -71,6 +97,14 @@
                     </div>
                     <div class="col-lg-8">
                         <input type="text" class="form-control" name="txtPrecioP" id="txtPrecioP" value="<%=p.getPrecioP()%>" size="30" maxlength="30">
+                    </div>
+                </div>
+                <div class="form-group col-lg-12">
+                    <div class="col-lg-4">
+                        <label > Stock :</label>
+                    </div>
+                    <div class="col-lg-8">
+                        <input type="text" class="form-control" name="txtStockP" id="txtStockP" value="<%=p.getStockP()%>" size="30" maxlength="30">
                     </div>
                 </div>
                 <div class="form-group col-lg-12">
@@ -101,8 +135,8 @@
                 </div>
                 <center>
                     <div class="form-group">
-                        <input type="button" name="btnCancelar" id="" class="button btn btn-danger" value="Cancelar">
-                        <input type="submit" name="btnGuardar" id="" class="button btn btn-primary" value="Guardar">
+                        <input type="button" name="btnCancelar" id="btnCancelar" class="button btn btn-danger" value="Cancelar">
+                        <input type="submit" name="btnGuardar" id="btnGuardar" class="button btn btn-primary" value="Guardar">
                     </div>
                 </center>
             </div>

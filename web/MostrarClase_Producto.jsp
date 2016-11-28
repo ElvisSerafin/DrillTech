@@ -18,7 +18,7 @@
     </head>
     <body>
         <div style="margin-left: 15%; margin-right: 15%; margin-top: 2%; ">
-            <center><h1><a>Clase de Productos Habilitados</a></h1></center>
+            <center><h1 style="color: #337ab7;">Clase de Productos Habilitados</h1></center>
             <br>
             <div>
                 <center><a href="CuentaAdministrador.jsp" class="link"><h4> Pagina principal </h4></a></center>
@@ -29,7 +29,7 @@
                 <table class="table table-hover">
                     <tr>
                         <th class="Titulo">
-                            CODIGO
+                            ID
                         </th>
                         <th class="Titulo">
                             NOMBRE
@@ -72,6 +72,7 @@
 
                 </table>
             </form>
+                    
         </div>
     </body>
 

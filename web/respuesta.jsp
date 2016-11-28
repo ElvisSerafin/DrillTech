@@ -1,7 +1,7 @@
 <%-- 
     Document   : Error
-    Created on : 05-nov-2015, 23:12:42
-    Author     : Daniel
+    Created on : 04-nov-2016, 11:44:08
+    Author     : Elvis
 --%>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
@@ -10,10 +10,11 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <link type="text/css" rel="stylesheet" href="css/css1.css" />
+        <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
         <title>JSP Page</title>
     </head>
     <body>
-        <h1 align="center">
+        <h1 align="center" class="alert alert-success">
             <%
                 if(request.getParameter("mens")!=null){
                     out.println(request.getParameter("mens"));

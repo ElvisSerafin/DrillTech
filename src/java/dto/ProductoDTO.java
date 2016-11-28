@@ -17,13 +17,14 @@ public class ProductoDTO {
     private String Marca_Producto;
     private String Descripcion;
     private double PrecioP;
+    private double StockP;
     private String ImagenP;
     private String EstadoP;
 
     public ProductoDTO() {
     }
 
-    public ProductoDTO(int idProducto, int idClase_Producto, String Clase_Producto, int idMarca_Producto, String Marca_Producto, String Descripcion, double PrecioP, String ImagenP, String EstadoP) {
+    public ProductoDTO(int idProducto, int idClase_Producto, String Clase_Producto, int idMarca_Producto, String Marca_Producto, String Descripcion, double PrecioP, double StockP, String ImagenP, String EstadoP) {
         this.idProducto = idProducto;
         this.idClase_Producto = idClase_Producto;
         this.Clase_Producto = Clase_Producto;
@@ -31,6 +32,7 @@ public class ProductoDTO {
         this.Marca_Producto = Marca_Producto;
         this.Descripcion = Descripcion;
         this.PrecioP = PrecioP;
+        this.StockP = StockP;
         this.ImagenP = ImagenP;
         this.EstadoP = EstadoP;
     }
@@ -91,6 +93,14 @@ public class ProductoDTO {
         this.PrecioP = PrecioP;
     }
 
+    public double getStockP() {
+        return StockP;
+    }
+
+    public void setStockP(double StockP) {
+        this.StockP = StockP;
+    }
+
     public String getImagenP() {
         return ImagenP;
     }
@@ -107,5 +117,6 @@ public class ProductoDTO {
         this.EstadoP = EstadoP;
     }
 
+   
     
 }

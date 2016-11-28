@@ -13,33 +13,25 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <link type="text/css" rel="stylesheet" href="css/css1.css" />
+        <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
         <title>JSP Page</title>
     </head>
     
     <body>
         
-        <form id="frmMostrarCabeceraProd">
-            <table id="tablaMostrarCabeceraProd">
-                <tr>
-                    <th>
-                        <h1> Productos habilitados </h1>
-                    </th>
-                </tr>
-                <tr>
-                    <td>
-                        <a href="CuentaAdministrador.jsp" class="link"><h4> Pagina principal </h4></a>
-                    </td>
-                </tr>
-            </table>
-        </form>
-        
-        <hr>
-        
-        <form id="frmMostrarCuerpoProd">
-            <table id="tablaMostrarCuerpoProd">
+        <div style="margin-left: 12%; margin-right: 12%; margin-top: 2%; ">
+            <center><h1 style="color: #0035B0;">Productos habilitados</h1></center>
+            <br>
+            <div>
+                <center><a href="CuentaAdministrador.jsp" class="link"><h4> Pagina principal </h4></a></center>
+            </div>
+
+
+            <form>
+                <table class="table table-hover">
                 <tr>
                     <th class="Titulo">
-                        CODIGO
+                        ID
                     </th>
                     <th class="Titulo">
                         CLASE
@@ -52,6 +44,9 @@
                     </th>
                     <th class="Titulo">
                         PRECIO
+                    </th>
+                    <th class="Titulo">
+                        STOCK
                     </th>
                     <th class="Titulo">
                         IMAGEN
@@ -86,6 +81,9 @@
                     <td>
                         <%=P.getPrecioP() %>
                     </td>
+                     <td>
+                        <%=P.getStockP() %>
+                    </td>
                     <td>
                         <%=P.getImagenP() %>
                     </td>
@@ -93,10 +91,14 @@
                         <%=P.getEstadoP() %>
                     </td>
                     <td class="Opcion">
-                        <input type="button" name="btnModificar" id="btnModificar" class="button" value="Modificar" onclick="location.href='ModificarProducto.jsp?idProducto=<%=P.getIdProducto()%>'"> 
+                        <input type="button" name="btnModificar" id="btnModificar"
+                               class="btn btn-success" value="Modificar"
+                               onclick="location.href='ServletProducto?idProducto=<%=P.getIdProducto()%>&&accion=editarProducto'"> 
                     </td>
                     <td class="Opcion">
-                        <input type="button" name="btnEliminar" id="btnEliminar" class="button" value="Eliminar" onclick="location.href='Servlet_Prod?idProducto=<%=P.getIdProducto()%>&&accion=eliminar'">
+                        <input type="button" name="btnEliminar" id="btnEliminar" 
+                               class="btn btn-danger" value="Eliminar" 
+                               onclick="location.href='ServletProducto?idProducto=<%=P.getIdProducto()%>&&accion=eliminar'">
                     </td>
                 </tr>
                 
@@ -105,6 +107,9 @@
                 %>
     
             </table>
-        </form>
+            </form>
+        </div>
+        <hr>
+       
     </body>
 </html>
